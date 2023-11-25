@@ -21,8 +21,8 @@
   "homepage": "https://github.com/nukeop/nuclear#readme",
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
-    "start": "lerna run start --stream",
-    "build": "shx rm -rf dist && lerna run build && npm run pack",
+    "start": "node api.js && lerna run start --stream",
+    "build": "node api.js && shx rm -rf dist && lerna run build && npm run pack",
     "test": "lerna run test",
     "coverage": "lerna run coverage",
     "lint": "lerna run lint",
@@ -150,8 +150,8 @@
       "icon": "./build/icons/512x512.png",
       "desktop": {
         "Name": "Nuclear",
-        "Name[es]": "Reproductor de música Nuclear",
-        "Comment[es]": "Reproductor que retransmite música desde fuentes encontradas automáticamente."
+        "Name[es]": "Reproductor de m\u00fasica Nuclear",
+        "Comment[es]": "Reproductor que retransmite m\u00fasica desde fuentes encontradas autom\u00e1ticamente."
       },
       "target": [
         "AppImage",
